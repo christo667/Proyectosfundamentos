@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+    <h2>Arreglos</h2>
+    <form>
+        <br><button onclick="arreglos()">Ingresar</button>
+        <br>
+        Arrelgo:<br>
+        <input type="text" id="arr"><br>
+        <br>Lugar del cambio:<br>
+        <input type="text" id="cambio"><br>
+        <br>Cambio:<br>
+        <input type="text" id="insert"><br>
+        
+    </form>
+    <script>
+        function arreglos(){
+            let text = document.getElementById("arr").value;
+            let arr = text.split("");
+            let cambio = document.getElementById("cambio").value;
+            let insert = document.getElementById("insert").value;
+
+            console.log(cambio - 1);
+            console.log(arr);
+            console.log(insert);
+            console.log(arr.splice(cambio - 1,1,insert));
+        
+            document.write("Nuevo Arreglo: "+arr);
+            
+        
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
