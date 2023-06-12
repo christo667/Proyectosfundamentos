@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formula general</title>
+    <h2>Formula general para ecuaciones cuadraticas</h2>
+    <form>
+        Ingresa "a":<br>
+        <input type="number" id="a"><br>
+        <br>Ingresa "b":<br>
+        <input type="number" id="b"><br>
+        <br>Ingresa "c":<br>
+        <input type="number" id="c"><br>
+        <button onclick="formula_gen()">Calcular</button>
+    </form>
+    <script>
+        function formula_gen(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+
+            let formula_parte_sup = 0;
+            formula_parte_sup = Math.sqrt((Math.pow(b,2))-(4*(a*c)));
+            console.log(formula_parte_sup)
+            let formula_parte_inf = 2*a;
+            console.log(formula_parte_inf);
+        
+            let x1 = (-b + formula_parte_sup)/formula_parte_inf;
+        
+            let x2 = (-b - formula_parte_sup)/formula_parte_inf;
+        
+            document.write("x1 = "+x1+" x2 = "+x2);
+        
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html> 
