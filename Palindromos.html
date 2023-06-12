@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromos</title>
+    <h2>Palindromos</h2>
+    <form>
+        Ingresa palabra:<br>
+        <input type="text" id="palin">
+        <button onclick="palindromos()">Verificar</button>
+    </form>
+    <script>
+        
+        function palindromos(){
+            let palindromo = document.getElementById("palin").value;
+            let i = 0;
+            let j = palindromo.length - 1;
+            console.log(j)
+            let media = Math.floor(j/2);
+
+            for (letra in palindromo){
+                console.log(palindromo[letra], "!==", palindromo[j]);
+                if(palindromo[letra] !== palindromo[j]){
+                    console.log("iguales:", false);
+                    return document.write("Tu palabra no es un palindromo");
+                }
+                j--;
+            }
+            console.log("iguales:", true);
+            return document.write("Tu palabra es un palindromo y la letra de enmedio es: "+palindromo[media]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
