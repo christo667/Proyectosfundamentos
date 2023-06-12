@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH-CASE</title>
+    <script>
+        function juego(){
+            let player1 = document.getElementById("player1").value;
+            let player2 = document.getElementById("player2").value;
+            let comparativa = player1+"-"+ player2;
+        
+            switch(comparativa){
+                case "R-T":
+                    document.write(comparativa+" Roca rompe Tijeras, gana el jugador 1");
+                    break;
+                case "T-P":
+                    document.write(comparativa+" Tijeras corta Papel, gana el jugador 1");
+                    break;
+                case "P-R":
+                    document.write(comparativa+" Papel cubre Roca, gana el jugador 1");
+                    break;
+                case "T-R":
+                    document.write(comparativa+" Roca rompe Tijeras, gana el jugador 2");
+                    break;
+                case "P-T":
+                    document.write(comparativa+" Tijeras corta Papel, gana el jugador 2");
+                    break;
+                case "R-P":
+                    document.write(comparativa+" Papel cubre Roca, gana el jugador 2");
+                    break;
+                default:
+                    document.write(comparativa+" Empate");
+                    break;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Player 1:<br>
+        <input type="password" placeholder="R,T,P" id="player1"><br>
+        Player 2:<br>
+        <input type="password" placeholder="R,T,P" id="player2"><br>
+        <button onclick="juego()">Jugar</button>
+
+    </form>
+</body>
+</html>
