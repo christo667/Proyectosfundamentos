@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <h2>Objetos</h2>
+    <script>
+        function Objetos(){
+            let conocer = document.getElementById("conocer").value;
+            let pulsar = {
+                Velocidad: "120 k/h",
+                Colores: "Blanca, azul y gris",
+                Medidas: ".80m de ancho por 2m de largo",
+                Capacidad: "12 litros",
+            };
+
+            document.write("Pulsar NS 200: "+conocer+": "+pulsar[conocer]);
+        }
+        
+    
+    </script>
+</head>
+<body>
+    <p>Motocicleta pulsar NS 200
+    </p>
+
+
+    Conoce sus caracteristicas:<br>
+    Velocidad<br>
+    Colores<br>
+    Medidas<br>
+    Capacidad<br>
+
+    <input type="text" id="conocer">
+    <button onclick="Objetos()">Buscar</button>
+</body>
+</html>
