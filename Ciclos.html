@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+    <h2>Ciclos</h2>
+    <form>
+    
+         Dame un numero:<br>
+        <input type="number"  id="rep"><br>
+        <br>
+        <button onclick="ciclo()">Insertar</button>
+    </form>
+    <script>
+        function ciclo(){
+            let rep =  document.getElementById("rep").value;
+            let num = 1;
+            for(let i = 1; i < rep; i++){
+                document.write(num+"<br>");
+                num += i;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
